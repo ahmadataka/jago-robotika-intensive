@@ -1,106 +1,34 @@
 import streamlit as st
 
-st.set_page_config(page_title="Pembuat Caption gambar Otomatis", layout="centered")
+st.set_page_config(
+    page_title="My Personal Website",
+    page_icon="🤖",
+    layout="centered",
+)
 
-st.title("Pembuat Caption Gambar")
+with st.sidebar:
+    st.title("Navigation")
+    menu = st.radio(
+        "Go to",
+        ["Home", "About Me", "Gallery", "Fun Zone", "Contact"],
+    )
 
-st.write("Selamat datang di website untuk membuat caption pada gambar secara otomatis!")
+if menu == "Home":
+    st.title("Welcome to My Website")
+    st.write("Hello! This is my first website using Streamlit.")
 
-uploaded_file = st.file_uploader("Upload gambarmu!", type=["jpg","jpeg", "png"])
+elif menu == "About Me":
+    st.title("About Me")
+    st.write("I am a robotics engineer with a passion for building robots and software applications.")
 
-jenis = st.selectbox("Pilih jenis gambarmu", ["hewan", "orang", "makanan", "tempat", "lain-lain"])
+elif menu == "Gallery":
+    st.title("Gallery")
+    st.write("Here is a gallery of my work.")
 
-style = st.selectbox("Pilih style caption-mu", ["serius", "lucu", "simpel", "gaul", "aneh"])
+elif menu == "Fun Zone":
+    st.title("Fun Zone")
+    st.write("Here is a fun zone.")
 
-if uploaded_file:
-    st.image(uploaded_file)
-    
-tombol=st.button("Buat caption-mu!")
-
-captions = {
-    "hewan": {
-        "lucu": 
-            "Hewan ini sepertinya sedang merencanakan sesuatu."
-        ,
-        "serius": 
-            "Ini adalah kingdom animalia"
-        ,
-        "simpel": 
-            "Ini hewan"
-        ,
-        "gaul": 
-            "gue hewan lho"
-        ,
-        "aneh": 
-            "aku lapar"
-    },
-    "orang": {
-        "lucu": 
-            "Orang ini sepertinya sedang merencanakan sesuatu."
-        ,
-        "serius": 
-            "Ini adalah homo sapiens"
-        ,
-        "simpel": 
-            "Ini orang"
-        ,
-        "gaul": 
-            "gue orang lho"
-        ,
-        "aneh": 
-            "aku lapar"
-    },
-    "makanan": {
-        "lucu": 
-            "Makanan ini sepertinya sedang merencanakan sesuatu."
-        ,
-        "serius": 
-            "Ini adalah makanan yang enak"
-        ,
-        "simpel": 
-            "Ini makanan, bukan hewan"
-        ,
-        "gaul": 
-            "ayo makan gue"
-        ,
-        "aneh": 
-            "kamu lapar?"
-    },
-    "tempat": {
-        "lucu": 
-            "Hewan ini sepertinya sedang merencanakan sesuatu."
-        ,
-        "serius": 
-            "Ini adalah kingdom animalia"
-        ,
-        "simpel": 
-            "Ini hewan"
-        ,
-        "gaul": 
-            "gue hewan lho"
-        ,
-        "aneh": 
-            "aku lapar"
-    },
-    "lain-lain": {
-        "lucu": 
-            "Hewan ini sepertinya sedang merencanakan sesuatu."
-        ,
-        "serius": 
-            "Ini adalah kingdom animalia"
-        ,
-        "simpel": 
-            "Ini hewan"
-        ,
-        "gaul": 
-            "gue hewan lho"
-        ,
-        "aneh": 
-            "aku lapar"
-    }
-    }
-if tombol and uploaded_file:
-    caption = captions[jenis][style]
-    st.success(caption)
-elif tombol and not uploaded_file:
-    st.warning("Upload dulu file-mu!")
+elif menu == "Contact":
+    st.title("Contact Me")
+    st.write("Here is a contact me page.")
