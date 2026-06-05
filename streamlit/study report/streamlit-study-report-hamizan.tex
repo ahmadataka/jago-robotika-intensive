@@ -1,0 +1,76 @@
+\documentclass[11pt,a4paper]{article}
+\usepackage[margin=1in]{geometry}
+\usepackage[T1]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage{lmodern}
+\usepackage{enumitem}
+\usepackage[hidelinks]{hyperref}
+\usepackage{parskip}
+
+\setlength{\parindent}{0pt}
+\setlength{\emergencystretch}{2em}
+\setlist[itemize]{leftmargin=1.4em}
+
+\begin{document}
+
+\begin{center}
+{\LARGE \textbf{Study Report Jago Robotika}}\\[1em]
+\end{center}
+
+\begin{tabular}{@{}ll@{}}
+\textbf{Kelas} & : Streamlit Python \\
+\textbf{Nama Siswa} & : Arnef Hamizan \\
+\textbf{Nama Tutor} & : Ataka \\
+\textbf{Jumlah Pertemuan} & : 12 \\
+\textbf{Tools} & : Streamlit \\
+\textbf{Bahasa} & : Python \\
+\textbf{Software yang digunakan} & : \url{https://streamlit.io/cloud} \\
+\textbf{Link Streamlit App} & : \url{https://hamizan.streamlit.app} \\
+\end{tabular}
+
+\begin{enumerate}[leftmargin=1.6em, label=\arabic*.]
+\item \textbf{Introduction to Streamlit}\\
+Sesi dimulai dengan pengenalan Streamlit sebagai framework Python yang memudahkan pembuatan web app interaktif tanpa perlu menulis HTML, CSS, atau JavaScript secara langsung. Peserta mempelajari struktur dasar aplikasi, menjalankan file Python sebagai app, serta memahami bagaimana elemen seperti \texttt{st.title()}, \texttt{st.write()}, dan \texttt{st.text()} digunakan untuk menampilkan konten. Peserta juga mengenal alur kerja edit lalu refresh yang menjadi ciri pengembangan dengan Streamlit.
+
+\item \textbf{Input Teks dan Widget Dasar}\\
+Peserta mempelajari berbagai widget input seperti \texttt{text\_input}, \texttt{text\_area}, dan \texttt{button}. Konsep interaksi pengguna diperkenalkan melalui form sederhana yang meminta nama, pesan, atau jawaban tertentu dari pengguna. Peserta belajar bahwa nilai dari widget dapat langsung digunakan dalam logika program untuk menampilkan respons yang personal dan interaktif.
+
+\item \textbf{Menu dan Navigasi Sederhana}\\
+Pada pertemuan ini, peserta mempelajari cara membuat navigasi antarhalaman menggunakan widget seperti \texttt{radio} atau \texttt{selectbox}, khususnya di sidebar. Dengan pendekatan ini, satu file app dapat berisi beberapa bagian konten yang ditampilkan secara kondisional. Materi ini menjadi dasar penting untuk membuat aplikasi yang lebih rapi dan terstruktur.
+
+\item \textbf{Upload File dan Menampilkan Media}\\
+Peserta belajar menggunakan \texttt{file\_uploader} untuk menerima file dari pengguna, terutama gambar. Setelah file diterima, peserta menampilkan konten tersebut kembali menggunakan \texttt{st.image()} dan memadukannya dengan pesan status seperti \texttt{st.success()} atau \texttt{st.info()}. Konsep ini membantu peserta memahami bagaimana Streamlit menangani input file secara langsung di browser.
+
+\item \textbf{Data dan Plot Sederhana}\\
+Peserta mempelajari cara menampilkan data tabel dan visualisasi sederhana di Streamlit. Dengan struktur data Python atau library pendukung, peserta dapat menyajikan data dalam bentuk yang lebih informatif. Materi ini menekankan hubungan antara pengolahan data dan penyajian visual, sehingga peserta memahami bahwa Streamlit juga berguna untuk dashboard dan aplikasi analitik.
+
+\item \textbf{Interaktivitas dan State Sederhana}\\
+Pertemuan ini difokuskan pada bagaimana aplikasi merespons aksi pengguna secara berulang. Peserta mempelajari logika if-else yang dipicu oleh widget, penggunaan tombol untuk mengeksekusi aksi tertentu, dan pengenalan konsep penyimpanan nilai sementara selama aplikasi berjalan. Materi ini mempersiapkan peserta untuk membuat aplikasi yang tidak hanya menampilkan informasi, tetapi juga mempertahankan interaksi yang lebih kompleks.
+
+\item \textbf{Membuat To-Do List App}\\
+Peserta membuat aplikasi to-do list sederhana untuk menambahkan dan menampilkan daftar tugas. Melalui proyek ini, peserta memadukan input teks, tombol, dan penyimpanan data sementara dalam aplikasi. Kegiatan ini membantu peserta memahami alur aplikasi yang lebih nyata, yaitu menerima input, menyimpan perubahan, lalu menampilkan hasilnya kembali kepada pengguna.
+
+\item \textbf{Sound Player dan Media App}\\
+Pada sesi ini, peserta mempelajari bagaimana Streamlit dapat digunakan untuk menampilkan atau memutar file audio. Peserta memanfaatkan widget upload serta komponen media seperti \texttt{st.audio()} untuk membuat aplikasi pemutar suara sederhana. Materi ini memperluas pemahaman bahwa web app tidak terbatas pada teks, tetapi juga dapat memproses media interaktif.
+
+\item \textbf{Mini Chatbot Logic}\\
+Peserta membuat chatbot sederhana berbasis aturan menggunakan input teks dan percabangan kondisi. Aplikasi merespons kata kunci tertentu dari pengguna, misalnya sapaan atau pertanyaan dasar, lalu menampilkan jawaban yang sesuai. Proyek ini melatih pemahaman peserta terhadap string processing, logika kondisi, dan desain interaksi percakapan sederhana.
+
+\item \textbf{Image Caption Generator Concept}\\
+Peserta mengembangkan aplikasi yang menerima gambar dan menghasilkan caption berdasarkan kategori atau pilihan gaya tertentu. Fokus materi bukan pada AI yang kompleks, melainkan pada alur interaktif aplikasi: menerima file, memilih opsi, dan menampilkan hasil sesuai logika yang sudah dibuat. Pertemuan ini memperkuat integrasi antara file upload, pilihan pengguna, dan output dinamis.
+
+\item \textbf{Personal Website Project}\\
+Peserta mulai membangun proyek personal website menggunakan Streamlit sebagai proyek integrasi materi. Dalam proyek ini, peserta menggabungkan menu navigasi, profil diri, galeri, bagian interaktif, dan halaman kontak ke dalam satu aplikasi utuh. Kegiatan ini menekankan penyusunan struktur aplikasi, konsistensi tampilan, dan penggabungan berbagai widget yang sudah dipelajari pada minggu-minggu sebelumnya.
+
+\item \textbf{Deployment Project Lanjutan}\\
+Minggu ke-12 difokuskan pada kelanjutan proyek minggu ke-11, yaitu menyempurnakan personal website yang sudah dibuat. Pada sesi ini, konsep deployment diperkenalkan secara ringan agar peserta mengetahui bahwa aplikasi yang dibuat di Python dan Streamlit dapat dipublikasikan secara online. Penjelasan mengenai GitHub dan Streamlit Community Cloud diberikan dalam bentuk gambaran umum saja, tanpa membebani peserta dengan langkah teknis yang terlalu rumit. Dengan pendekatan ini, peserta tetap memahami alur besar publikasi aplikasi, sambil tetap berfokus pada penyelesaian proyek personal website mereka.
+\end{enumerate}
+
+\textbf{Pengamatan terhadap Siswa}
+\begin{itemize}
+\item [--] Hamizan mengikuti kelas dengan antusias dan memiliki rasa ingin tahu yang tinggi. Hamizan juga aktif merespon pertanyaan dari tutor. Hamizan juga berkali-kali memberi ide kreatif terkait aplikasi web yang dikembangkan.
+\item [--] Hamizan mampu mengikuti kelas dengan baik dan mampu mendemonstrasikan materi yang dipelajari dengan membuat aplikasi web sendiri. Hamizan memahami konsep komputasional dengan baik sehingga mampu membuat aplikasi web yang kompleks. Hamizan juga punya kreativitas dan imajinasi untuk memodifikasi program sesuai fitur yang dia inginkan.
+\item [--] Yang bisa ditingkatkan adalah Hamizan perlu membiasakan diri menulis kode program dalam durasi yang lebih singkat. Ini penting karena seringkali di realita, ada batasan waktu dalam pembuatan aplikasi. 
+\end{itemize}
+
+\end{document}
