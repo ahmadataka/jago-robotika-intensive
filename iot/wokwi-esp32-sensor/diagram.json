@@ -1,0 +1,21 @@
+{
+  "version": 1,
+  "author": "OpenAI Codex",
+  "editor": "wokwi",
+  "parts": [
+    { "type": "wokwi-esp32-devkit-v1", "id": "esp", "top": -12, "left": -4, "attrs": {} },
+    {
+      "type": "wokwi-dht22",
+      "id": "dht1",
+      "top": -70.2,
+      "left": 225.4,
+      "attrs": { "temperature": "27.5", "humidity": "61" }
+    }
+  ],
+  "connections": [
+    [ "esp:3V3", "dht1:VCC", "red", [ "v0" ] ],
+    [ "esp:GND.1", "dht1:GND", "black", [ "h0" ] ],
+    [ "esp:15", "dht1:SDA", "green", [ "h0" ] ]
+  ],
+  "dependencies": {}
+}

@@ -6,6 +6,7 @@ Koleksi materi Python untuk kelas intensive Jago Robotika yang dikumpulkan ke sa
 
 - `pygame/`: materi dan proyek berbasis `pygame`, termasuk aset audio, gambar, dan beberapa subfolder pendukung.
 - `streamlit/`: materi dan proyek berbasis `streamlit`.
+- `iot/`: contoh proyek `ESP32 + Wokwi + backend API + dashboard Streamlit`.
 - `docs/`: dokumentasi inventaris dan catatan struktur.
 
 ## Catatan Restruktur
@@ -26,4 +27,10 @@ Contoh `streamlit`:
 
 ```bash
 streamlit run "streamlit/Week 1 - Coba Streamlit.py"
+```
+
+Contoh `iot` dashboard:
+
+```bash
+streamlit run "iot/dashboard/app.py"
 ```
