@@ -7,6 +7,17 @@ Week 1 hanya butuh:
 - `streamlit`
 - `Visual Studio Code (VS Code)` sebagai editor
 
+## Install VS Code
+
+1. Download `Visual Studio Code`
+2. Install seperti aplikasi biasa
+3. Buka folder project `jago-robotika-intensive` di VS Code
+
+Opsional extension yang membantu:
+
+- `Python`
+- `Pylance`
+
 ## Opsi 1 - Install global
 
 ```bash
@@ -41,6 +52,12 @@ pip install streamlit
 python3 --version
 python3 -m pip show streamlit
 ```
+
+Cek VS Code:
+
+- pastikan VS Code bisa dibuka
+- pastikan folder project berhasil dibuka
+- pastikan file `chatbot/week-1/app.py` bisa diedit
 
 ## Menjalankan App
 

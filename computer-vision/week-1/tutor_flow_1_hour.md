@@ -32,10 +32,19 @@ Saat mengajar, file yang dibahas tetap `satu file yang sama`, tetapi dibuat bert
 
 Langkah tutor:
 
-1. Buka folder project di `VS Code`
-2. Cek apakah `Python`, `Streamlit`, `Pillow`, dan `NumPy` sudah ada
-3. Jika belum, install dulu
-4. Jalankan app pertama kali
+1. Pastikan `VS Code` sudah terinstall
+2. Jika belum, install `VS Code` dulu
+3. Buka folder project di `VS Code`
+4. Cek apakah `Python`, `Streamlit`, `Pillow`, dan `NumPy` sudah ada
+5. Jika belum, install dulu
+6. Jalankan app pertama kali
+
+Langkah install VS Code:
+
+- download `Visual Studio Code`
+- install seperti aplikasi biasa
+- buka folder `jago-robotika-intensive`
+- pastikan file `computer-vision/week-1/app.py` terlihat di sidebar
 
 Perintah cek:
 
