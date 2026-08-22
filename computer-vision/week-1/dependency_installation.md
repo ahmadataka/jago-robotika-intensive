@@ -1,4 +1,6 @@
-# Instalasi Dependency - Computer Vision Week 1
+# Persiapan Komputer - Computer Vision Week 1
+
+Panduan ini dikerjakan di komputer masing-masing. Siswa membuat file Python sendiri dari nol, sehingga tidak perlu membuka atau mengunduh folder repo Jago Robotika.
 
 ## Dependency
 
@@ -13,7 +15,8 @@ Week 1 butuh:
 
 1. Download `Visual Studio Code`
 2. Install seperti aplikasi biasa
-3. Buka folder project `jago-robotika-intensive` di VS Code
+3. Buat folder baru, misalnya `computer-vision-week-1`, di lokasi yang mudah ditemukan
+4. Buka VS Code, lalu pilih **File > Open Folder** dan pilih folder `computer-vision-week-1`
 
 Opsional extension yang membantu:
 
@@ -58,19 +61,39 @@ python3 -m pip show streamlit pillow numpy
 Cek VS Code:
 
 - pastikan VS Code bisa dibuka
-- pastikan folder project berhasil dibuka
-- pastikan file `computer-vision/week-1/app.py` bisa diedit
+- pastikan folder `computer-vision-week-1` berhasil dibuka
+
+## Membuat File Python
+
+1. Di panel Explorer VS Code, klik ikon **New File**.
+2. Beri nama file: `app.py`.
+3. Ketik kode yang diberikan tutor ke dalam file tersebut.
+4. Simpan dengan `Ctrl+S` (Windows) atau `Cmd+S` (Mac).
 
 ## Menjalankan App
 
+1. Buka terminal di VS Code melalui menu **Terminal > New Terminal**.
+2. Pastikan terminal berada di folder yang sama dengan file `app.py`.
+3. Jalankan:
+
 ```bash
-streamlit run computer-vision/week-1/app.py
+streamlit run app.py
 ```
 
-## File Requirements
+Browser akan membuka aplikasi Streamlit secara otomatis. Jika tidak, buka alamat yang muncul di terminal, biasanya `http://localhost:8501`.
+
+Untuk menghentikan aplikasi, kembali ke terminal lalu tekan `Ctrl+C`.
+
+## Jika Perintah Tidak Dikenali
 
 ```bash
-pip install -r computer-vision/week-1/requirements.txt
+python3 -m streamlit run app.py
+```
+
+Di Windows, gunakan:
+
+```bash
+python -m streamlit run app.py
 ```
 
 ## Catatan
