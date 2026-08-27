@@ -21,53 +21,45 @@ Fokus pembelajaran bukan pada teori matematika yang berat, tetapi pada:
 Rekomendasi tools:
 
 - `Python`
-- `OpenCV`
-- `Streamlit` atau notebook / script biasa untuk demo visual
+- `Streamlit` untuk app interaktif
+- `Pillow` untuk membuka dan mengubah gambar
+- `NumPy` untuk membaca gambar sebagai data pixel
+- `OpenCV` mulai digunakan saat masuk webcam dan deteksi visual
 
 Jika ingin lebih ringan untuk awal:
 
 - mulai dari script Python + gambar statis
 - baru ke webcam setelah siswa nyaman
 
-## Week 1 - Intro to Computer Vision
+## Week 1 - Intro to Computer Vision and Image Upload
 
 Fokus:
 
 - apa itu computer vision
 - contoh penerapan di kehidupan nyata
-- bagaimana komputer membaca gambar
+- upload dan menampilkan gambar di Streamlit
+- membaca ukuran gambar: lebar dan tinggi
+- mengenal gambar sebagai array RGB dengan `Pillow` dan `NumPy`
 
 Output:
 
-- siswa memahami konsep dasar computer vision dan contoh penggunaannya
+- app yang menampilkan gambar, ukuran gambar, bentuk array, dan jumlah channel warna
 
-## Week 2 - Review Python for Vision Projects
+## Week 2 - Read Pixels and Basic Image Processing
 
 Fokus:
 
-- variable
-- condition
-- loop
-- function
-- review library dasar
+- pixel sebagai titik warna penyusun gambar
+- RGB: red, green, blue
+- melihat nilai pixel dari gambar dengan array `NumPy`
+- mengubah gambar sederhana: grayscale, inverse color, atau brightness
+- membandingkan gambar asli dan hasil pengolahan
 
 Output:
 
-- siswa siap menggunakan Python untuk project visual
+- mini app yang membaca pixel dan menghasilkan satu efek gambar sederhana
 
-## Week 3 - Intro to Images in Python
-
-Fokus:
-
-- membaca gambar
-- menampilkan gambar
-- memahami ukuran gambar dan pixel
-
-Output:
-
-- mini app / script untuk membuka dan menampilkan gambar
-
-## Week 4 - Image Editing Basics
+## Week 3 - Image Editing Basics
 
 Fokus:
 
@@ -81,20 +73,20 @@ Output:
 
 - tool edit gambar sederhana
 
-## Week 5 - Color and Filters
+## Week 4 - Color and Filters
 
 Fokus:
 
-- grayscale
-- blur
-- brightness
+- brightness dan contrast
+- blur dan sharpen ringan
 - color channels
+- membandingkan beberapa filter dalam satu app
 
 Output:
 
 - filter gambar sederhana
 
-## Week 6 - Drawing and Visual Annotation
+## Week 5 - Drawing and Visual Annotation
 
 Fokus:
 
@@ -107,7 +99,7 @@ Output:
 
 - project memberi anotasi pada gambar
 
-## Week 7 - Intro to Webcam Input
+## Week 6 - Intro to Webcam Input
 
 Fokus:
 
@@ -119,17 +111,29 @@ Output:
 
 - aplikasi webcam sederhana
 
-## Week 8 - Motion and Color Detection
+## Week 7 - Color Detection
 
 Fokus:
 
-- deteksi warna sederhana
-- deteksi gerakan sederhana
+- RGB dan HSV secara praktis
 - threshold dan masking dasar
+- melacak benda dengan warna tertentu
 
 Output:
 
-- project interaktif berbasis warna atau gerakan
+- project color tracker sederhana
+
+## Week 8 - Motion Detection
+
+Fokus:
+
+- deteksi gerakan sederhana
+- membandingkan dua frame kamera
+- tantangan membuat alarm gerakan atau motion game
+
+Output:
+
+- project interaktif berbasis gerakan
 
 ## Week 9 - Face Detection
 
@@ -209,4 +213,3 @@ Supaya kelas tetap ramah untuk siswa:
 `Computer Vision for Kids` adalah kelas project-based yang mengajak siswa belajar bagaimana komputer dapat "melihat" dan memahami gambar. Siswa akan mempelajari dasar-dasar pengolahan gambar, menggunakan kamera, membuat filter visual, hingga membangun project interaktif seperti deteksi wajah, pelacakan warna, dan aplikasi berbasis webcam.
 
 Melalui kelas ini, siswa tidak hanya belajar coding, tetapi juga melatih logika, kreativitas, problem solving, dan kemampuan membuat project teknologi yang modern dan menarik. Di akhir program, siswa akan memiliki karya computer vision mereka sendiri yang dapat dipresentasikan sebagai hasil belajar nyata.
-
