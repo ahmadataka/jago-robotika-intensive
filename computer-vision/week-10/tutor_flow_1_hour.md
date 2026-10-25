@@ -5,6 +5,7 @@ Durasi: `60 menit`
 File utama:
 
 - `app.py`
+- `starter.py` sebagai template awal opsional
 
 Tujuan:
 
@@ -29,6 +30,8 @@ streamlit run app.py
 ```
 
 Siapkan gambar dengan detail jelas dan beberapa benda merah, hijau, atau biru yang terpisah. Webcam tidak wajib karena aplikasi memiliki pilihan upload.
+
+Untuk menghemat waktu mengetik, tutor dapat membagikan isi `starter.py` sebelum kelas. Siswa menyalin template tersebut ke file `app.py`. Template sudah berisi import, pilihan project, camera/upload, dan pembacaan gambar; siswa fokus menambahkan pemrosesan vision. `app.py` di materi tutor adalah kode final untuk pengecekan.
 
 ## Alur 1 Jam
 
@@ -55,9 +58,9 @@ Jika belum terpasang:
 python3 -m pip install streamlit pillow numpy "opencv-python-headless<5"
 ```
 
-### 8-16 menit: Bagian 1 - Pilihan project dan input
+### 8-16 menit: Bagian 1 - Buka template dan review input
 
-Tulis bagian awal:
+Jika memakai `starter.py`, bagian awal berikut tidak perlu diketik ulang. Tutor membacanya bersama siswa:
 
 ```python
 import cv2
@@ -75,11 +78,11 @@ project = st.sidebar.selectbox(
 input_mode = st.sidebar.radio("Sumber gambar", ["Kamera", "Upload"])
 ```
 
-Tambahkan pengaturan warna dan ukuran minimum hanya ketika Color Object Counter dipilih, kemudian tambahkan camera input dan upload mengikuti kode lengkap.
+Template juga sudah memuat pengaturan warna, ukuran minimum, camera input, upload, serta pembacaan gambar. Jika tidak memakai template, tulis bagian tersebut secara bertahap mengikuti kode lengkap.
 
 ### 16-25 menit: Bagian 2 - Baca gambar dan buat dua filter
 
-Di dalam `if input_file:`, tambahkan:
+Template sudah membaca gambar di dalam `if input_file:`. Mulai penulisan materi dari pemrosesan filter berikut:
 
 ```python
 image = Image.open(input_file).convert("RGB")

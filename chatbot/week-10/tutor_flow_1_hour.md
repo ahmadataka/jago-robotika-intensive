@@ -5,6 +5,7 @@ Durasi: `60 menit`
 File utama:
 
 - `app.py`
+- `starter.py` sebagai template awal opsional
 
 Tujuan:
 
@@ -29,6 +30,8 @@ streamlit run app.py
 ```
 
 Week 10 tidak membutuhkan akun Gemini atau API key. Tegaskan bahwa output yang ditampilkan masih simulasi.
+
+Untuk menghemat waktu mengetik, tutor dapat membagikan isi `starter.py` sebelum kelas. Siswa menyalin template tersebut ke file `app.py`, lalu hanya melengkapi bagian prompt, request, dan response selama kelas. `app.py` di materi tutor adalah kode final untuk pengecekan.
 
 ## Alur 1 Jam
 
@@ -83,9 +86,11 @@ Pertanyaan -> Prompt -> Request API -> Model AI -> Response -> App
 
 Jelaskan bahwa Week 10 hanya mensimulasikan alur tersebut di dalam satu file Python.
 
-### 18-26 menit: Bagian 1 - Tampilan dan diagram alur
+### 18-26 menit: Bagian 1 - Buka template dan review tampilan
 
-Tulis bagian awal:
+Jika memakai `starter.py`, bagian tampilan, sidebar, input, dan validasi safety sudah tersedia. Tutor cukup membacanya bersama siswa, bukan mengetik ulang semua baris.
+
+Bagian awal template:
 
 ```python
 import streamlit as st
@@ -101,11 +106,11 @@ st.sidebar.write("3. API menerima request")
 st.sidebar.write("4. Model mengirim response")
 ```
 
-Pastikan siswa dapat menjelaskan kembali arti empat langkah tersebut.
+Pastikan siswa dapat menjelaskan kembali arti empat langkah tersebut. Jika tidak memakai template, tulis bagian ini secara bertahap seperti biasa.
 
-### 26-36 menit: Bagian 2 - Input untuk menyusun prompt
+### 26-36 menit: Bagian 2 - Review input untuk menyusun prompt
 
-Tambahkan:
+Bagian berikut sudah tersedia dalam template dan digunakan untuk menjelaskan input prompt:
 
 ```python
 role = st.selectbox(
@@ -127,9 +132,9 @@ Jelaskan empat bagian prompt:
 - format: bentuk jawaban yang diinginkan
 - pertanyaan: informasi yang ingin diketahui pengguna
 
-### 36-44 menit: Bagian 3 - Safety sebelum request
+### 36-44 menit: Bagian 3 - Review safety sebelum request
 
-Tambahkan tombol dan validasi:
+Tombol dan validasi berikut juga sudah tersedia dalam template:
 
 ```python
 if st.button("Kirim Simulasi"):
