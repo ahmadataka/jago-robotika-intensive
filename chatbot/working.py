@@ -1,4 +1,18 @@
 import streamlit as st
+from google import genai
+from google.genai import errors
+import os
+
+model_name = "gemini-3.5-flash-lite"
+
+def get_api_key():
+    try:
+        return st.secrets.get("GEMINI_API_KEY", "") or os.getenv("GEMINI_API_KEY", "")
+    except FileNotFoundError:
+        return os.getenv("GEMINI_API_KEY", "")
+
+api_key = get_api_key()
+client = genai.Client(api_key=api_key)
 
 st.title("AI Request Simulator")
 st.caption("Pelajari prompt, request, dan response sebelum memakai Gemini sungguhan.")
@@ -30,23 +44,14 @@ if st.button("Kirim Simulasi"):
         Pertanyaan: {question.strip()}.
         Jawab pertanyaan dengan baik dan mudah dipahami oleh siswa."""
 
-        request_data = {
-            "model": "gemini-simulation",
-            "prompt": prompt,
-        }
-        response_data = {
-            "status": "success",
-            "text": f"[SIMULASI] AI akan membuat {response_style.lower()} untuk: {question.strip()}",
-        }
-
-        st.subheader("1. Prompt")
-        st.code(prompt)
-
-        st.subheader("2. Request")
-        st.code(request_data)
-
-        st.subheader("3. Response")
-        st.code(response_data)
-
-        with st.chat_message("assistant"):
-            st.write(response_data["text"])
+        with st.spinner("Gemini sedang berpikir..."):
+            try:
+                response = client.models.generate_content(
+                    model=model_name,
+                    contents=prompt,
+                )
+                answer = response.text or "Gemini belum memberikan jawaban."
+                st.subheader("Jawaban Gemini")
+                st.write(answer)
+            except Exception:
+                st.error("Request gagal tersambung. Periksa koneksi internet lalu coba lagi.")
